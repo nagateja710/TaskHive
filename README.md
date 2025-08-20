@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # TaskHive
+=======
+# ZCRUM 🌟
+>>>>>>> e96b943 (v)
 
 A full-stack Jira clone built with **Next.js**, **React**, **Tailwind CSS**, **Prisma**, **Neon**, **Clerk**, and **Shadcn UI**. This project mimics Jira’s task management and authentication features with a modern, responsive UI.
 
