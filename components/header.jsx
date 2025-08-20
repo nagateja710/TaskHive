@@ -10,14 +10,14 @@ const Header = async () => {
     await checkUser();
     return (
         <header className="container mx-auto">
-            <nav className="py-6 px-4 flex justify-between items-center">
+            <nav className="py-4 px-4 flex justify-between items-center">
                 <Link href="/">
                     <Image
-                        src={"/logo2.png"}
+                        src={"/logo_h.png"}
                         alt="Zcrum Logo"
-                        width={200}
-                        height={56}
-                        className="h-10 w-auto object-contain"
+                        width={300}
+                        height={500}
+                        className="h-40 w-auto object-contain"
                     />
                 </Link>
                 <div className="flex items-center gap-4">

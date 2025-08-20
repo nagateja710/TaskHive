@@ -33,16 +33,16 @@ export default function Home() {
     <div className="min-h-screen">
       {/* hero section*/}
       <section className="container mx-auto py-20 text-center">
-        <h1 className="text-6xl sm:text-7xl lg:text-8xl font-extrabold gradient-title pb-6 flex flex-col">
+        <h1 className="text-6xl sm:text-7xl lg:text-8xl font-extrabold bg-gradient-to-r from-yellow-500 via-yellow-300 to-white bg-clip-text text-transparent pb-6 flex flex-col">
           Streamline Your Workflow <br/>
           <span className="flex mx-auto gap-3 sm:gap-4 items-center">
-            with{" "}
+            with {" "}
             <Image
-              src={"/logo2.png"}
+              src={"/logo_h.png"}
               alt="Zcrum Logo"
-              width={400}
-              height={80}
-              className="h-14 sm:h24 w-auto object-contain"
+              width={500} 
+              height={300}
+              className="h-50 sm:h24 w-auto object-contain"
             />
           </span>
         </h1>
