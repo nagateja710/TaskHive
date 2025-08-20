@@ -8,7 +8,7 @@ import { shadesOfPurple } from "@clerk/themes";
 const inter = Inter({ subsets: ["latin"]});
 
 export const metadata = {
-  title: "Zcrum",
+  title: "Task-Hive",
   description: "Project Management App",
 }; 
 
