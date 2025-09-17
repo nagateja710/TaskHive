@@ -35,11 +35,11 @@ export default function RootLayout({ children }) {
     }}
     >
       <html lang="en" suppressHydrationWarning>
-        <body className={`${inter.className} dotted-background`}>
-            <ThemeProvider attribute="class" defaultTheme="dark">
+        <body className={`${inter.className} dotted-background-white`}>
+            <ThemeProvider attribute="class" defaultTheme="light">
               <Header/>
               <main className="min-h-screen">{children}</main>
-              <footer className="bg-gray-900 py-12">
+              <footer className="bg-gray-600 py-12">
                 <div className="container mx-auto px-4 text-center text-gray-200">
                   <p>Made using NextJS</p>
                 </div>

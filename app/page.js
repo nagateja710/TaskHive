@@ -33,24 +33,20 @@ export default function Home() {
     <div className="min-h-screen">
       {/* hero section*/}
       <section className="container mx-auto py-20 text-center">
-        <h1 className="text-6xl sm:text-7xl lg:text-8xl font-extrabold bg-gradient-to-r from-yellow-500 via-yellow-300 to-white bg-clip-text text-transparent pb-6 flex flex-col">
+        <h1 className=" text-6xl sm:text-7xl lg:text-8xl font-extrabold bg-gradient-to-r from-yellow-100 via-yellow-300 to-yellow-500 bg-clip-text text-transparent pb-6 flex flex-col">
           Streamline Your Workflow <br/>
           <span className="flex mx-auto gap-3 sm:gap-4 items-center">
-            with {" "}
-            <Image
-              src={"/logo_h.png"}
-              alt="Zcrum Logo"
-              width={500} 
-              height={300}
-              className="h-50 sm:h24 w-auto object-contain"
-            />
+            with  
+            <span className=" bg-gradient-to-r from-red-400  via-yellow-400 to-purple-400 bg-clip-text text-transparent">
+               TASK-HIVE
+            </span>
           </span>
         </h1>
-        <p className="text-xl text-gray-300 mb-10 max-w-3xl mx-auto">
+        <p className="text-xl text-gray-600 mb-10 max-w-3xl mx-auto">
           Empower your team with our intuitive project management solution.
         </p>
         <Link href="/onboarding">
-          <Button size="lg" className="mr-2">
+          <Button size="lg" className="mr-2 ">
             Get Started <ChevronRight size={18}/>
           </Button>
         </Link>
@@ -62,19 +58,19 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section id="features" className="bg-gray-900 py-20 px-5">
+      <section id="features" className=" bg-gradient-to-r from-blue-100 via-blue-300 to-blue-500 bg-opacity-10 py-20 px-5">
         <div className="container mx-auto">
           <h3 className="text-3xl font-bold mb-12 text-center">Key Features</h3>
           <div className="grid grid-cols lg:grid-cols-3 gap-8">
             {features.map((feature, index) => {
               return (
-                <Card key={index} className="bg-gray-800">
+                <Card key={index} className="bg-blue-50">
                   <CardContent className="pt-6">
-                    <feature.icon className="h-12 w-12 mb-4 text-blue-300" />
+                    <feature.icon className="h-12 w-12 mb-4 text-blue-900" />
                     <h4 className="text-xl font-semibold mb-2">
                       {feature.title}
                     </h4>
-                    <p className="text-gray-300">{feature.description}</p>
+                    <p className="text-gray-700">{feature.description}</p>
                   </CardContent>
                 </Card>
               );
@@ -94,7 +90,7 @@ export default function Home() {
       </section>
 
       {/* FAQ Section */}
-      <section className="bg-gray-900 py-20 px-5">
+      <section className="bg-gradient-to-br from-blue-500 via-blue-300 to-blue-200 py-20 px-5">
         <div className="container mx-auto">
           <h3 className="text-3xl font-bold mb-12 text-center">
             Frequently Asked Questions
@@ -117,7 +113,7 @@ export default function Home() {
             Ready to Transform Your Workflow?
           </h3>
           <p className="text-xl mb-12">
-            Join thousands of teams already using ZCRUM to streamline their
+            Join thousands of teams already using Task-hive to streamline their
             projects and boost productivity.
           </p>
           <Link href="/onboarding">

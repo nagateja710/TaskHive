@@ -5,11 +5,19 @@ import { BarLoader } from "react-spinners";
 import { useForm, Controller } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import {
-  Drawer,
-  DrawerContent,
-  DrawerHeader,
-  DrawerTitle,
-} from "@/components/ui/drawer";
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogClose
+} from "@/components/ui/dialog";
+// import {
+//   Dialog,
+//   DialogContent,
+//   DialogHeader,
+//   DialogTitle,
+//   DialogTrigger,
+// } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import {
@@ -26,7 +34,7 @@ import { getOrganizationUsers } from "@/actions/organizations";
 import { issueSchema } from "@/app/lib/validators";
 import { toast } from "sonner";
 
-export default function IssueCreationDrawer({
+export default function IssueCreationDialog({
   isOpen,
   onClose,
   sprintId,
@@ -88,11 +96,14 @@ export default function IssueCreationDrawer({
   }, [newIssue, createIssueLoading]);
 
   return (
-    <Drawer open={isOpen} onClose={onClose}>
-      <DrawerContent>
-        <DrawerHeader>
-          <DrawerTitle>Create New Issue</DrawerTitle>
-        </DrawerHeader>
+    <Dialog className="max-w-lg w-full p-6 rounded-lg shadow-lg relative" open={isOpen} onClose={onClose}>
+      <DialogContent>
+        {/* <DialogClose className="absolute down-3 right-3 text-gray-500 hover:text-gray-700">
+          x
+        </DialogClose> */}
+        <DialogHeader>
+          <DialogTitle>Create New Issue</DialogTitle>
+        </DialogHeader>
         {usersLoading && <BarLoader width={"100%"} color="#36d7b7" />}
         <form onSubmit={handleSubmit(onSubmit)} className="p-4 space-y-4">
           <div>
@@ -142,7 +153,7 @@ export default function IssueCreationDrawer({
             )}
           </div>
 
-          <div>
+          <div >
             <label
               htmlFor="description"
               className="block text-sm font-medium mb-1"
@@ -153,9 +164,11 @@ export default function IssueCreationDrawer({
               name="description"
               control={control}
               render={({ field }) => (
-                <MDEditor value={field.value} onChange={field.onChange} />
-              )}
-            />
+                <MDEditor    height={200}
+                             data-color-mode="light"
+                             value={field.value} onChange={field.onChange} />
+                   )}
+                />
           </div>
 
           <div>
@@ -196,7 +209,7 @@ export default function IssueCreationDrawer({
             {createIssueLoading ? "Creating..." : "Create Issue"}
           </Button>
         </form>    
-      </DrawerContent>
-    </Drawer>
+      </DialogContent>
+    </Dialog>
   );
 }

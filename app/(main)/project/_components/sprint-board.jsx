@@ -12,7 +12,7 @@ import statuses from "@/data/status";
 import { getIssuesForSprint, updateIssueOrder } from "@/actions/issues";
 
 import SprintManager from "./sprint-manager";
-import IssueCreationDrawer from "./create-issue";
+import IssueCreationDialog from "./create-issue";
 import IssueCard from "@/components/issue-card";
 import BoardFilters from "./board-filters";
 
@@ -160,7 +160,7 @@ export default function SprintBoard({ sprints, projectId, orgId }) {
       )}
 
       <DragDropContext onDragEnd={onDragEnd}>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-4 bg-slate-900 p-4 rounded-lg">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-4 bg-blue-300 p-4 rounded-lg">
           {statuses.map((column) => (
             <Droppable key={column.key} droppableId={column.key}>
               {(provided) => (
@@ -222,7 +222,7 @@ export default function SprintBoard({ sprints, projectId, orgId }) {
         </div>
       </DragDropContext>
 
-      <IssueCreationDrawer
+      <IssueCreationDialog
         isOpen={isDrawerOpen}
         onClose={() => setIsDrawerOpen(false)}
         sprintId={currentSprint.id}
