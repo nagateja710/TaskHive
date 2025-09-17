@@ -1,7 +1,6 @@
 # TaskHive
 =======
-# ZCRUM 🌟
->>>>>>> e96b943 (v)
+
 
 A full-stack Jira clone built with **Next.js**, **React**, **Tailwind CSS**, **Prisma**, **Neon**, **Clerk**, and **Shadcn UI**. This project mimics Jira’s task management and authentication features with a modern, responsive UI.
 
@@ -22,10 +21,7 @@ A full-stack Jira clone built with **Next.js**, **React**, **Tailwind CSS**, **P
 
 ## Setup
 
-1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/harshavardhan282/ZCRUM.git
-   cd ZCRUM
+1. **Clone the Repository**
 
 2. **Install Dependencies**:
     ```bash
